@@ -1,0 +1,22 @@
+<mat-toolbar 
+  *ngIf='isShow'
+  [ngClass]="{
+  'mat-bg-info': message.type === 'danger',
+  'mat-bg-success': message.type === 'success',
+  'mat-warn': message.type === 'warning'
+  }"  
+  >
+    <mat-toolbar-row [ngClass]="{'class-row-alert': isShow}">
+      <div class="wrapper">
+        <div class="content-block">
+            <span>{{message.body}}</span>
+            <button mat-stroked-button *ngIf="message.action" (click)="confirmBtn()">Accent</button>
+        </div>
+
+        <button mat-mini-fab class="btn-close" (click)="close()">
+             <i class="material-icons">close</i>
+        </button>
+        
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>

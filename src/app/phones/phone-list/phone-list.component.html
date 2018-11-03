@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div class="list-header">
+    <a routerLink="/phones/create" >
+      <button mat-stroked-button color="primary">add Phone</button>
+    </a>
+  </div> 
+  <div class="list-body">
+    <app-phone-item *ngFor='let phone of list' [phone]="phone"></app-phone-item>
+  </div>
+    
+</div>

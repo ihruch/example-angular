@@ -1,0 +1,18 @@
+
+<form class='edit-form' (ngSubmit)='upDatePhone()'>
+
+    <mat-form-field class="input-group">
+      <mat-label>Name </mat-label>
+      <input matInput  name='nameField' [(ngModel)]="phone.name">
+    </mat-form-field>
+  
+    <mat-form-field class="input-group">
+      <mat-label>Description</mat-label>
+      <textarea matInput name='descField'  [(ngModel)]="phone.description" ></textarea>
+    </mat-form-field>
+
+    <div class="btn-action">
+        <button mat-stroked-button type="submit">  Save </button>
+    </div>
+
+  </form>

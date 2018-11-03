@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <form [formGroup]="logForm" (ngSubmit)="sendData()" class="login-form">
+      
+      <section class='title-form'>
+        <h3>Для входы необходимо ввести логин и пароль</h3>
+      </section>
+
+      <mat-form-field >
+          <input matInput placeholder="Email" formControlName="emailField">
+          <mat-error *ngIf="formErrors.emailField" class="error">
+              {{ formErrors.emailField }}
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field >
+          <input matInput placeholder="Password" formControlName="passField" type="password">
+          <mat-error *ngIf="formErrors.passField" class="error">
+              {{ formErrors.passField }}
+          </mat-error>
+      </mat-form-field>
+
+      <div class="block-actions">
+          <button mat-stroked-button color="primary" type="submit">Push</button>
+      </div>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<div class="container" > 
+    <form [formGroup]="createForm" class="create-form" (ngSubmit)="createPhone()">
+            <mat-form-field >
+                <input matInput placeholder="Enter url image" formControlName="urlImg" />
+            </mat-form-field>
+            <mat-form-field >
+                <input matInput placeholder="Enter name Phone" formControlName="nameProduct" />
+            </mat-form-field>
+            <mat-form-field >
+                <input matInput placeholder="Enter description" formControlName="descProduct" />
+            </mat-form-field>
+            <div class="block-actions">
+                <button mat-stroked-button color="primary" type="submit">Create</button>
+            </div>
+    </form>
+</div>

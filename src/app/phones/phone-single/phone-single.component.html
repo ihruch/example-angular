@@ -1,0 +1,18 @@
+
+<div class="container">
+    <mat-card class="single-card">
+        <img mat-card-image src={{singlePhone.photo}} alt={{singlePhone.name}}>
+
+        <mat-card-content>
+            <mat-card-title>{{singlePhone.name}}</mat-card-title>
+          <p>
+              {{singlePhone.description}}
+          </p>
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <button mat-stroked-button color="primary" (click)='editBtn()'> Edit</button>
+          <button mat-stroked-button color="accent" (click)='deleteBtn()'>Delete </button>
+        </mat-card-actions>
+    </mat-card>
+</div>
